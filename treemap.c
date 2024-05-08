@@ -80,9 +80,17 @@ void eraseTreeMap(TreeMap * tree, void* key){
 }
 
 
+// Ejercicio 2:
+// Esta función busca un nodo con una clave dada en el árbol y devuelve el par asociado a esa clave. Si no se encuentra la clave, devuelve NULL. La función también actualiza el puntero current del árbol al nodo encontrado o al nodo más cercano a la clave buscada.
 
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
+    if (tree == NULL || tree->root == NULL) {
+        return NULL;
+    }
+    
+    
+    
     return NULL;
 }
 
