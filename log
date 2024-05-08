@@ -23,3 +23,30 @@ treemap.c:45:16: error: unused variable ‘nuevo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 4906c0d
+Wed 08 May 2024 07:36:18 PM UTC: 
+ treemap.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:45:22: error: initialization of ‘TreeNode *’ from incompatible pointer type ‘TreeMap *’ [-Werror=incompatible-pointer-types]
+   45 |     TreeNode * mapa= (TreeMap*)malloc(sizeof(TreeMap));
+      |                      ^
+treemap.c:46:8: error: ‘nuevo’ undeclared (first use in this function)
+   46 |     if(nuevo == NULL){
+      |        ^~~~~
+treemap.c:46:8: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:51:9: error: ‘TreeNode’ has no member named ‘root’
+   51 |     mapa->root = NULL;
+      |         ^~
+treemap.c:52:9: error: ‘TreeNode’ has no member named ‘current’
+   52 |     mapa->current = NULL;
+      |         ^~
+treemap.c:53:9: error: ‘TreeNode’ has no member named ‘lower_than’
+   53 |     mapa->lower_than = lower_than;
+      |         ^~
+treemap.c:56:1: error: control reaches end of non-void function [-Werror=return-type]
+   56 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+babab8a
