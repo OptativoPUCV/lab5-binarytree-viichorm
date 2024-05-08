@@ -36,9 +36,13 @@ TreeNode * createTreeNode(void* key, void * value) {
     return new;
 }
 
-TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
+// Ejercicio 1 LAB 5
+// Esta función crea un nuevo mapa ordenado (TreeMap) e inicializa sus variables, incluida la función de comparación de claves.
 
+TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
     //new->lower_than = lower_than;
+
+    TreeMap * map = (TreeMap *)malloc(sizeof(TreeMap));
     return NULL;
 }
 
