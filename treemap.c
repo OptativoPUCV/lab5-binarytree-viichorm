@@ -56,7 +56,28 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 }
 
 
+// Ejercicio 3
+// La función insertTreeMap inserta un nuevo dato (clave-valor) en el árbol TreeMap.
+
+
+
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
+    if (tree->root == NULL){
+
+        tree->root = (TreeNode*)malloc(sizeof(TreeNode));
+        tree->root->pair = (Pair*)malloc(sizeof(Pair));
+        tree->root->pair->key = key;
+        tree->root->pair->value = value;
+        tree->root->left = NULL;
+        tree->root->right = NULL;
+        tree->current = tree->root;
+        
+        
+
+        
+    }
+
+    
 
 }
 
