@@ -245,12 +245,22 @@ Pair * firstTreeMap(TreeMap * tree) {
     }
 
     tree->current = current;
-    return current->pair;
+    return current->pair; //|Estaba retornando null antes... >.<
 }
 
 
 //Ejercicio 6.2
 
 Pair * nextTreeMap(TreeMap * tree) {
+    if (tree == NULL || tree->current == NULL) {
+        return NULL;
+    }
+
+    TreeNode * current = tree->current;
+    if (current->right != NULL){
+        tree->current = minimum(current->right);
+        return tree->current->pair;
+    }
+    TreeNode * parent = current->parent;
     return NULL;
 }
