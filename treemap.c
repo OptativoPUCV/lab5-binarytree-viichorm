@@ -83,7 +83,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
 
                     if (currentNode->left == NULL){
 
-                    currentNode->left = (TreeNode*)malloc(sizeof(TreeNode);
+                    currentNode->left = (TreeNode*)malloc(sizeof(TreeNode));
                     currentNode->left->pair->key = key;
                     currentNode->left->pair->value = value;
                     currentNode->left->left = NULL;
