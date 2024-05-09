@@ -243,9 +243,12 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
 
             
-        } else if {
+        } else if (tree->lower_than(current->pair->key, key)){
 
             current = current->right;
+        } else {
+
+            return current->pair;
         }
 
 
