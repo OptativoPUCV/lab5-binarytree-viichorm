@@ -338,3 +338,9 @@ treemap.c:272:11: error: ‘TreeMap’ has no member named ‘curent’; did you
       |           current
 Compilation failed
 a3dfc23
+Thu 09 May 2024 08:19:45 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  25|1
+total_score: 60/70
+643ed78
