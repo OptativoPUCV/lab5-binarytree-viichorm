@@ -243,6 +243,8 @@ Pair * firstTreeMap(TreeMap * tree) {
 
         current = current->left;
     }
+
+    tree->current = current;
     return NULL;
 }
 
