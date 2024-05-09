@@ -272,3 +272,14 @@ Thu 09 May 2024 05:02:18 AM UTC:
  tests:  18|3
 total_score: 40/70
 c95f90b
+Thu 09 May 2024 08:16:09 PM UTC: 
+ treemap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:241:16: error: unused variable ‘current’ [-Werror=unused-variable]
+  241 |     TreeNode * current = tree->root;
+      |                ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0c04ac2

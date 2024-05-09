@@ -222,14 +222,29 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     return NULL;
 }
 
+//ejercicio 7
+
 
 Pair * upperBound(TreeMap * tree, void* key) {
     return NULL;
 }
 
+//Ejercicio 6.1
+// Esta funcion encuentra el primer clave-valor del arbol ordenado. 
+
 Pair * firstTreeMap(TreeMap * tree) {
+
+    if(tree == NULL || tree->root == NULL){
+        return NULL;
+    }
+
+    TreeNode * current = tree->root;
+    
     return NULL;
 }
+
+
+//Ejercicio 6.2
 
 Pair * nextTreeMap(TreeMap * tree) {
     return NULL;
