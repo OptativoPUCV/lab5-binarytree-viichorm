@@ -245,7 +245,7 @@ Pair * firstTreeMap(TreeMap * tree) {
     }
 
     tree->current = current;
-    return current->piar;
+    return current->pair;
 }
 
 
