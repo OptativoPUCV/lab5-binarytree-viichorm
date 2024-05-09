@@ -157,3 +157,9 @@ treemap.c:101:43: error: ‘*(TreeNode *)malloc (32).pair’ may be used uniniti
 cc1: all warnings being treated as errors
 Compilation failed
 82c83c2
+Thu 09 May 2024 04:01:00 AM UTC: 
+ treemap.c | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+ tests:  11|6
+total_score: 15/70
+f07beee

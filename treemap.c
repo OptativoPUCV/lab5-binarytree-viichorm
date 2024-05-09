@@ -63,7 +63,6 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
     if (tree->root == NULL){
-
         tree->root = (TreeNode*)malloc(sizeof(TreeNode));
         tree->root->pair = (Pair*)malloc(sizeof(Pair));
         tree->root->pair->key = key;
@@ -72,50 +71,38 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         tree->root->right = NULL;
         tree->current = tree->root;
     } else {
-
-
         TreeNode * currentNode = tree->root;
         while (currentNode != NULL){
-
             int cmp = strcmp(key, currentNode->pair->key);
-
-                if (cmp < 0){
-
-                    if (currentNode->left == NULL){
-
+            if (cmp < 0){
+                if (currentNode->left == NULL){
                     currentNode->left = (TreeNode*)malloc(sizeof(TreeNode));
+                    currentNode->left->pair = (Pair*)malloc(sizeof(Pair));
                     currentNode->left->pair->key = key;
                     currentNode->left->pair->value = value;
                     currentNode->left->left = NULL;
                     currentNode->left->right = NULL;
                     tree->current = currentNode->left;
                     return;
-                    
-                    }
+                }
                 currentNode = currentNode->left;
             } else if (cmp > 0){
-
-                    if (currentNode->right == NULL){
-
-                        currentNode->right = (TreeNode*)malloc(sizeof(TreeNode));
-                        currentNode->right->pair->key = key;
-                        currentNode->right->pair->value = value;
-                        currentNode->right->left = NULL;
-                        currentNode->right->right = NULL;
-                        tree->current = currentNode->right;
-                        return;
-                    }
-                    currentNode= currentNode->right;
-                    
-            } else {
+                if (currentNode->right == NULL){
+                    currentNode->right = (TreeNode*)malloc(sizeof(TreeNode));
+                    currentNode->right->pair = (Pair*)malloc(sizeof(Pair));
+                    currentNode->right->pair->key = key;
+                    currentNode->right->pair->value = value;
+                    currentNode->right->left = NULL;
+                    currentNode->right->right = NULL;
+                    tree->current = currentNode->right;
                     return;
+                }
+                currentNode= currentNode->right;
+            } else {
+                return;
             }
-            
         }
     }
-
-    
-
 }
 
 TreeNode * minimum(TreeNode * x){
