@@ -223,9 +223,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 }
 
 //ejercicio 7
-
+// La funcion retorna un puntero al nodo que contiene la clave minima del arbol, que sea mayor o igual a la clave dada.
 
 Pair * upperBound(TreeMap * tree, void* key) {
+
+    if (tree == NULL || tree->root == NULL){
+        return NULL;
+    }
+
+    
     return NULL;
 }
 
@@ -272,7 +278,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     tree->current = parent;
     if (parent != NULL){
         return parent->pair;
-    }
+    } 
     
     return NULL;
 }
