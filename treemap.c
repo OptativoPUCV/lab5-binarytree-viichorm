@@ -90,10 +90,10 @@ void insertTreeMap(TreeMap* tree, void* key, void* value) {
             } else if (tree->lower_than(current->pair->key, key)) {
                 current = current->right;
             } else {
-                
                 current->pair->value = value;
                 free(newPair); 
-                free(newNode);
+                free(newNode); 
+                tree->current = current; 
                 return;
             }
         }
@@ -103,6 +103,7 @@ void insertTreeMap(TreeMap* tree, void* key, void* value) {
         } else {
             parent->right = newNode;
         }
+        tree->current = newNode; 
     }
 }
 
