@@ -111,7 +111,10 @@ void insertTreeMap(TreeMap* tree, void* key, void* value) {
 // La función minimum que busca el nodo con la clave mínima en el subárbol con raíz en un nodo dado x.
 
 TreeNode * minimum(TreeNode * x){
-
+    if (x == NULL){
+        return NULL;
+    }
+    
     return NULL;
 }
 
