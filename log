@@ -114,3 +114,21 @@ treemap.c:80:17: error: unused variable ‘cmp’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 349a1d0
+Thu 09 May 2024 03:56:24 AM UTC: 
+ treemap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:86:75: error: expected ‘)’ before ‘;’ token
+   86 |                     currentNode->left = (TreeNode*)malloc(sizeof(TreeNode);
+      |                                                          ~                ^
+      |                                                                           )
+treemap.c:92:28: error: expected ‘;’ before ‘}’ token
+   92 |                     return;
+      |                            ^
+      |                            ;
+   93 | 
+   94 |                     }
+      |                     ~       
+Compilation failed
+588fb19

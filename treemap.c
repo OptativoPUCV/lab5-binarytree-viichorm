@@ -77,23 +77,23 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         TreeNode * currentNode = tree->root;
         while (currentNode != NULL){
 
-            int cmp = strcmp(key, currentNode->key){
+            int cmp = strcmp(key, currentNode->pair->key);
 
                 if (cmp < 0){
 
                     if (currentNode->left == NULL){
 
-                    currentNode->left = (TreeNode*)malloc(sizeof(TreeNode))
-                        currentNode->left->key = key;
-                        currentNode->left->value = value;
-                        currentNode->left->left = NULL;
-                    currentNOde->left->right = NULL;
+                    currentNode->left = (TreeNode*)malloc(sizeof(TreeNode);
+                    currentNode->left->pair->key = key;
+                    currentNode->left->pair->value = value;
+                    currentNode->left->left = NULL;
+                    currentNode->left->right = NULL;
                     tree->current = currentNode->left;
                     return;
                     
                     }
-                currentNOde= currentNode->left;
-                }
+                currentNode= currentNode->left;
+            
             }
         }
     }
