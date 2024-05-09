@@ -239,7 +239,10 @@ Pair * firstTreeMap(TreeMap * tree) {
     }
 
     TreeNode * current = tree->root;
-    
+    while (current->left != NULL){
+
+        current = current->left;
+    }
     return NULL;
 }
 
