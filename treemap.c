@@ -288,7 +288,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 
 //Ejercicio 6.2
-
+//La funcion devuelve el siguiente clave-valor del arbol ordenado.
 Pair * nextTreeMap(TreeMap * tree) {
     if (tree == NULL || tree->current == NULL) {
         return NULL;
