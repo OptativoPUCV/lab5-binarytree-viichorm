@@ -166,7 +166,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
             }
         }
 
-       
+       //Habria que aplicar free aqui o no .... :>
         
     }
 
