@@ -157,6 +157,15 @@ void removeNode(TreeMap * tree, TreeNode* node) {
             }
             child->parent = node->parent;
         }
+
+        //
+        
+    }
+
+    else {
+        TreeNode* minNode = minimum(node->right);
+        node->pair = minNode->pair;
+            eraseTreeMap(tree, minNode);
     }
 
 }
